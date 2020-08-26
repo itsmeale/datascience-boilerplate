@@ -10,6 +10,7 @@ mypy = "==0.770"
 
 [packages]
 hydra-core = "*"
+project-name = {editable = true, path = "."}
 
 [scripts]
 lint = "mypy ./ --ignore-missing-imports"
