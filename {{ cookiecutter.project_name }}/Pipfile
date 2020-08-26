@@ -4,9 +4,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-black = "*"
-isort = "*"
-mypy = "*"
+black = "20.8b1"
+isort = "5.4.2"
+mypy = "0.782"
 
 [packages]
 hydra-core = "*"
