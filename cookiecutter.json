@@ -1,5 +1,6 @@
 {
     "project_name": "project_name",
     "author_name": "Your name (or your organization/company/team)",
+    "author_email": "Your e-mail",
     "description": "A short description of the project."
 }
