@@ -32,7 +32,8 @@ To install run
 ```
 $ scripts/setup_env
 ```
-After installing you could access the virtual enviroment with `poetry shell`
+After installing you could access the virtual enviroment with `poetry shell` \
+Create a github repository and add the remote origin to do yout project version control.
 
 ## How to run
 ...
