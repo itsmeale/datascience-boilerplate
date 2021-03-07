@@ -1,6 +1,3 @@
-import pytest
-
-
 class TestDummy:
 
     def test_simple_assertion(self):

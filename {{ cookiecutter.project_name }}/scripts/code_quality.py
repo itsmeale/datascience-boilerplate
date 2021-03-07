@@ -10,11 +10,11 @@ def check_code_formatting():
 
 
 def sort_import_order():
-    os.system("isort --check ./{{ cookiecutter.project_name }}/ --gitignore --dont-follow-links --verbose")
+    os.system("isort --check ./{{ cookiecutter.project_name }}/ ./tests/ --gitignore --dont-follow-links --verbose")
 
 
 def do_code_formatting():
-    os.system("black --check ./{{ cookiecutter.project_name }}/ --exclude __init__.py --verbose")
+    os.system("black --check ./{{ cookiecutter.project_name }}/ ./tests/ --exclude __init__.py --verbose")
 
 
 def linter():
