@@ -1,6 +1,6 @@
 # Data science boilerplate
 
-An boilerplate made with cookiecutter to help the start of the development of data science projects.
+A boilerplate made with cookiecutter to help the start of the development of data science projects.
 
 ## How to start
 ```
