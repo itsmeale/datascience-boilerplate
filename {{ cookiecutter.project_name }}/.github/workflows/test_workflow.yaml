@@ -18,5 +18,10 @@ jobs:
         uses: actions/setup-python@v2
       - name: Install dependencies
         run: |
-        python -m pip upgrade pip
-        pip install requirements.txt
+        scripts/setup_env
+  code-quality-checks:
+    name: Code quality checks
+    steps:
+      - name: Check code quality
+        run: |
+        poetry run check-code-quality
