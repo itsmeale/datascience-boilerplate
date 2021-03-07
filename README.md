@@ -5,5 +5,5 @@ An boilerplate made with cookiecutter to help the start of the development of da
 ## How to start
 ```
 $ pip install cookiecutter
-$ cookiecutter https://github.com/orbialabs/datascience-boilerplate
+$ cookiecutter https://github.com/itsmeale/datascience-boilerplate
 ```
