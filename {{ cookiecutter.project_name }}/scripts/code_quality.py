@@ -23,15 +23,3 @@ def linter():
 
 def run_tests():
     os.system("pytest ./tests/ --verbose --color=yes --code-highlight=yes")
-
-
-def check_code_quality():
-    check_import_order()
-    check_code_formatting()
-    linter()
-    run_tests()
-
-
-def code_formatting():
-    sort_import_order()
-    do_code_formatting()
