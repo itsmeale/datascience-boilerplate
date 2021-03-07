@@ -8,19 +8,28 @@ on:
 
 jobs:
   ci:
-    name: Setup application enviroment
+    name: CI
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup python
         uses: actions/setup-python@v2
-      - name: get poetry
+      - name: Get poetry
         run: |
           pip install poetry==1.1.5
       - name: install project dependencies
         run: |
           poetry install
-      - name: Code quality checks
+      - name: Check code formatting
         run: |
-          poetry run check-code-quality
+          poetry run fmt-check
+      - name: Check import orders
+        run: |
+          poetry run isort-check
+      - name: Linter
+        run: |
+          poetry run linter
+      - name: Run tests
+        run: |
+          poetry run tests

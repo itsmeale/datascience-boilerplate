@@ -19,5 +19,9 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry.scripts]
-code-formatting = "scripts.code_quality:code_formatting"
-check-code-quality = "scripts.code_quality:check_code_quality"
+fmt = "scripts.code_quality:do_code_formatting"
+isort-fmt = "scripts.code_quality:sort_import_order"
+fmt-check = "scripts.code_quality:check_code_formatting"
+isort-check = "scripts.code_quality:check_import_order"
+linter = "scripts.code_quality:linter"
+tests = "scripts.code_quality:run_tests"
