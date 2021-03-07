@@ -2,7 +2,7 @@ import os
 
 
 def check_import_order():
-    os.system("isort --check ./{{ cookiecutter.project_name }}/ --gitignore --dont-follow-links --verbose")
+    os.system("isort --check ./{{ cookiecutter.project_name }}/ --skip __init__.py --gitignore --dont-follow-links --verbose")
 
 
 def check_code_formatting():
@@ -10,7 +10,7 @@ def check_code_formatting():
 
 
 def sort_import_order():
-    os.system("isort ./{{ cookiecutter.project_name }}/ ./tests/ --gitignore --dont-follow-links --verbose")
+    os.system("isort ./{{ cookiecutter.project_name }}/ ./tests/ --skip __init__.py --gitignore --dont-follow-links --verbose")
 
 
 def do_code_formatting():
