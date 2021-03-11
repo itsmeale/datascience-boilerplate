@@ -32,12 +32,6 @@ jobs:
       - name: Run tests
         run: |
           poetry run tests
-  publish_docker_image:
-    name: Publish docker image
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
