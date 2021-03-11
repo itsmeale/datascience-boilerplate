@@ -13,4 +13,4 @@ RUN apt-get update \
 
 EXPOSE 80
 
-CMD ["uvicorn", "{{ cookiecutter.project-name }}.app.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "{{ cookiecutter.project_name }}.app.main:app", "--host", "0.0.0.0", "--port", "80"]
