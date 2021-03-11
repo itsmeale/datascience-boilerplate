@@ -23,6 +23,8 @@ Project Organization
 ├── tests                         -- folder with test scripts
 ├── scripts                       -- folder with bash scripts used for setup the project
 ├── README.md                     -- description of what the project consists of, how to reproduce it and how to contribute
+├── Dockerfile                    -- Describes the docker image.
+├── .dockerign                    -- Describes assets to be ignore by docker.
 ├── params.yml                    -- file with all parameters used in the project, to facilitate documentation and reproduction
 └── pyproject.toml                -- file that specify all code dependencies
 ```
