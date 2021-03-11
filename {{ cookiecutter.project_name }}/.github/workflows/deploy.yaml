@@ -41,8 +41,10 @@ jobs:
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
+          {% raw %}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+          {% endraw %}
           registry: docker.pkg.github.com
           repository: {{ cookiecutter.github_user }}/{{ cookiecutter.project_name }}/{{ cookiecutter.project_name }}
           tag_with_ref: true
