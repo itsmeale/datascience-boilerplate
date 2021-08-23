@@ -18,13 +18,15 @@ Project Organization
 │   └── figures
 ├── setup.py                      -- setup file for the module to be installable
 ├── {{cookiecutter.project_name}} -- folder where the scripts are stored
-│   ├── features                  -- feature engineering scripts
-│   └── models                    -- model training scripts
+│   ├── extraction                -- code to obtain data
+│   ├── featuers                  -- feature engineering scripts
+│   ├── models                    -- model training scripts
+│   └── pipelines                 -- python scripts to reproduce the project from start to end                    
 ├── tests                         -- folder with test scripts
 ├── scripts                       -- folder with bash scripts used for setup the project
 ├── README.md                     -- description of what the project consists of, how to reproduce it and how to contribute
 ├── Dockerfile                    -- Describes the docker image.
-├── .dockerign                    -- Describes assets to be ignore by docker.
+├── .dockerignore                 -- Describes assets to be ignore by docker.
 ├── params.yml                    -- file with all parameters used in the project, to facilitate documentation and reproduction
 └── pyproject.toml                -- file that specify all code dependencies
 ```
@@ -32,7 +34,7 @@ Project Organization
 ## How to install
 To install run
 ```
-$ scripts/setup_env
+$ poetry install
 ```
 After installing you could access the virtual enviroment with `poetry shell` \
 Create a github repository and add the remote origin to do yout project version control.
@@ -48,6 +50,9 @@ $ poetry install
 
 Create your own branch, do your contribution and certifies that the code is complaint with the code standards:
 ```
-$ poetry run check-code-quality
+$ poetry run fmt-check
+$ poetry run isort-check
+$ poetry run linter
+$ poetry run tests
 ```
 Now, open the pull request and enjoy code review :)

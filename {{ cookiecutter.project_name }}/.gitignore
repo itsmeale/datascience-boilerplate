@@ -87,3 +87,8 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# data extensions
+*.csv
+*.parquet
+*.avro

@@ -1,7 +1,6 @@
-from codecs import open  # To use a consistent encoding
 from os import path
 
-from setuptools import find_packages, setup  # Always prefer setuptools over distutils
+from setuptools import find_packages, setup
 
 here = path.abspath(path.dirname(__file__))
 
@@ -12,7 +11,6 @@ setup(
     author="{{ cookiecutter.author_name }}",
     license="MIT",
     classifiers=[
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
