@@ -23,7 +23,7 @@ jobs:
             python-version: ${{ matrix.python-version }}
       - name: Get poetry
         run: |
-          pip install poetry==1.1.5
+          pip install poetry==1.1.6
       - name: install project dependencies
         run: |
           poetry config virtualenvs.create false
