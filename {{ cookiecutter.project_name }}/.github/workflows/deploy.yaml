@@ -18,7 +18,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v2
         with:
-            python-version: ${{ matrix.python-version }}
+            python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
       - name: Get poetry
         run: |
           pip install poetry==1.1.6
@@ -44,4 +44,4 @@ jobs:
           pypi_token: ${{ secrets.PYPI_TOKEN }}
           ignore_dev_requirements: "yes"
           poetry_version: '==1.1.6'
-          repository_name: '{{ cookiecutter.project_name }}}'
+          repository_name: '{{ cookiecutter.project_name }}'

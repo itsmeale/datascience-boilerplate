@@ -20,7 +20,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v2
         with:
-            python-version: ${{ matrix.python-version }}
+            python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
       - name: Get poetry
         run: |
           pip install poetry==1.1.6
