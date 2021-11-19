@@ -30,13 +30,13 @@ jobs:
           poetry install
       - name: Check code formatting
         run: |
-          black --check ./sspdata/ --exclude __init__.py --verbose
+          black --check ./{{ cookiecutter.project_name }}/ --exclude __init__.py --verbose
       - name: Check import orders
         run: |
-          isort --check ./sspdata/ --skip __init__.py --gitignore --dont-follow-links --verbose
+          isort --check ./{{ cookiecutter.project_name }}/ --skip __init__.py --gitignore --dont-follow-links --verbose
       - name: Linter
         run: |
-          pylama ./sspdata/ ./tests/
+          pylama ./{{ cookiecutter.project_name }}/ ./tests/
       - name: Run tests
         run: |
           pytest ./tests/ --verbose --color=yes --code-highlight=yes
